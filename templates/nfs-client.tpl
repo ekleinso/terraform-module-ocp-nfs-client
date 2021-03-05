@@ -169,7 +169,7 @@ metadata:
     app: nfs-client-provisioner
   name: nfs-client
   annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
+    storageclass.kubernetes.io/is-default-class: "${is_default_class}"
 provisioner: ${cluster_name}/nfs-client-provisioner
 allowVolumeExpansion: true
 reclaimPolicy: Delete
